@@ -1,0 +1,50 @@
+{
+  "name": "willianstsousa-portfolio-admin",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit --incremental false",
+    "test": "tsx --test tests/**/*.test.ts",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "setup:env": "node scripts/create-local-env.mjs",
+    "setup:neon-direct": "node scripts/configure-neon-direct.mjs",
+    "verify:local": "tsx scripts/verify-local.ts",
+    "verify:http": "tsx scripts/verify-http.ts",
+    "verify:auth-http": "tsx scripts/verify-auth-http.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "tsx scripts/seed.ts"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "1.1.0",
+    "drizzle-orm": "0.45.2",
+    "lucide-react": "1.34.0",
+    "next": "16.3.3",
+    "next-auth": "5.0.0-beta.32",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "0.0.1",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@next/env": "^16.3.3",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.3",
+    "tailwindcss": "4.3.3",
+    "tsx": "latest",
+    "typescript": "6.0.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
